@@ -1,0 +1,18 @@
+{
+  "name": "trishabanerjee.github.io",
+  "version": "1.0.0",
+  "description": "This repository contains the source code for my personal portfolio website, designed to showcase my skills, projects, and experience",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "sass sass/main.scss css/style.css --watch",
+    "prefix:css": "postcss css/style.css --use autoprefixer -b 'last 10 versions' -o css/style.css",
+    "compress:css": "sass sass/main.scss css/style.css --style=compressed",
+    "build": "npm-run-all prefix:css compress:css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "sass": "^1.64.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0"
+  }
+}
