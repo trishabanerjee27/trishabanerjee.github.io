@@ -278,14 +278,58 @@ textarea {
 }
 .home-hero__social-icon-link {
   width: 100%;
-  display: block;
+  display: inline-block;
+  position: relative;
   padding: 1.2rem;
   border-bottom: 2px solid #eee;
   transition: background 0.3s;
 }
-.home-hero__social-icon-link:hover {
-  background: rgba(178, 148, 205, 0.8);
+
+
+/* Tooltip Styling
+.home-hero__social-icon-link {
+  position: relative;
+  display: inline-block;
+} */
+
+/* Default Hidden Tooltip */
+.tooltip {
+  visibility: hidden;
+  background-color: #b294cd;
+  color: #010101;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 500;
+  position: absolute;
+  left: 110%; /* Move tooltip to the right */
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.1s ease-in-out;
 }
+
+/* Show Tooltip on Hover */
+.home-hero__social-icon-link:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Add a small arrow pointing towards the icon */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+
 .home-hero__social-icon-link--bd-none {
   border-bottom: 0;
 }
@@ -642,15 +686,16 @@ textarea {
     padding: 0 2rem;
   }
 }
+
+.header__logo-container:hover {
+  color: #b294cd;
+}
 .header__logo-container {
   display: flex;
   align-items: center;
   cursor: pointer;
   color: #fff;
   transition: color 0.3s;
-}
-.header__logo-container:hover {
-  color: #b294cd;
 }
 .header__logo-img-cont {
   width: 5rem;
@@ -676,7 +721,7 @@ textarea {
 }
 .header__logo-sub {
   font-size: 1.8rem;
-  text-transform: uppercase;
+  text-transform: running;
   font-weight: 700;
   letter-spacing: 1px;
 }
