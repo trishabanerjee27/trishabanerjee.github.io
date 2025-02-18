@@ -81,6 +81,8 @@ textarea {
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
+  text-shadow: 2px 2px 8px #b693d3;
+  -webkit-text-stroke: 2px #816697cc; /* Outline Effect */
 }
 @media only screen and (max-width: 37.5em) {
   .heading-primary {
@@ -178,7 +180,7 @@ textarea {
   letter-spacing: 2px;
   display: inline-block;
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: 50px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
 }
@@ -186,9 +188,21 @@ textarea {
   transform: translateY(-3px);
 }
 .btn--bg {
-  padding: 1.5rem 8rem;
-  font-size: 2rem;
+  padding: 1rem 4rem; /* Reduce padding to make it smaller */
+  font-size: 1.5rem; /* Reduce font size */
+  border-radius: 30px; /* Makes it pill-shaped */
+  background: #b294cd; /* Custom color */
+  color: white;
 }
+
+.btn--bg:hover {
+  background: #816697; /* Change to a new color on hover */
+  color: #fff; /* Keep text color white */
+  transform: scale(1.05); /* Slight size increase on hover */
+  transition: all 0.3s ease-in-out;
+}
+
+
 .btn--med {
   padding: 1.5rem 5rem;
   font-size: 1.6rem;
