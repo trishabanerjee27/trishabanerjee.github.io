@@ -257,6 +257,8 @@ textarea {
 }
 .home-hero #vanta-bg {
   position: absolute;
+  background-color: black; /* Ensures a black background before Vanta loads */
+
   top: 0;
   left: 0;
   width: 100%;
